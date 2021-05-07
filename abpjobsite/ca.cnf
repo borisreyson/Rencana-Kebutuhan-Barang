@@ -1,0 +1,21 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+default_keyfile = abpjobsite.key
+prompt = no
+
+[req_distinguished_name]
+C = ID
+ST = Kalimantan Timur
+L = Tenggarong
+O = PT ALAMJAYA BARA PRATAMA
+OU = ABP ENERGY
+CN = *.abpjobsite.com
+
+[v3_req]
+keyUsage = keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.2 = *.abpjobsite.com
